@@ -163,7 +163,7 @@ export default function Dashboard() {
                         disabled={todo.id === deletingTodo}
                         onClick={() => handleDeleteTodo(todo.id)}
                       >
-                        {deletingTodo == todo.id ? "Deleting..." : "Delete"}
+                        {deletingTodo === todo.id ? "Deleting..." : "Delete"}
                       </button>
                     </div>
                   </li>
