@@ -42,6 +42,7 @@ export default function Dashboard() {
     return () => {
       isMounted = false;
     };
+    // eslint-disable-next-line
   }, []);
 
   const handleAddTask = async (e: any) => {
