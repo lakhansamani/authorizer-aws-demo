@@ -1,0 +1,25 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    certmanager.k8s.io/acme-challenge-type: dns01
+    kubernetes.io/ingress.class: nginx
+  name: authorizer
+spec:
+  rules:
+    - host: auth.aws-demo.authorizer.dev
+      http:
+        paths:
+          - backend:
+              service:
+                name: authorizer
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - auth.aws-demo.authorizer.dev
+      secretName: authorizer-tls

@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+a {
+  font-size: 18px;
+  color: #3B82F6;
+}
+
+.link-btn {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 20px;
+  /*input has OS specific font-family*/
+  color: #3B82F6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.inner-container {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  padding: 30px;
+  width: 80%;
+}
+
+.err {
+  color: #FF4742;
+  text-align: center;
+  font-style: italic;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.user-info {
+  font-size: 20px;
+  display: flex;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.dashboard form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard input {
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+  margin-right:20px;
+}
+
+.dashboard ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dashboard li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .inner-container {
+    width: 40%;
+  }
+}
+
+
+.dashboard .btn {
+  background-color: #3B82F6;
+  color: white;
+  padding: 10px;
+  outline: none;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard .btn.red {
+  background-color: #FF4742;
+}
+
+.dashboard .btn.green {
+  background-color: #2ea44f;
+}
