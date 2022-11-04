@@ -97,6 +97,8 @@ Example: `auth.aws-demo.authorizer.dev` in below screenshot
 
 ### Step 6: Create Cluster Issuer with dns01 challenge
 
+> Note: Change email & hostzoneID as per step5 in `cluster_issuer.yaml`
+
 Cert manager will add txt record and will verify the domain details using this issuer.
 
 ```sh
@@ -104,6 +106,8 @@ kubectl apply -f cluster_issuer.yaml
 ```
 
 ### Step 7: Create Ingress for authorizer
+
+> Note: Change authorizer domain as per your auth domain in `authorizer_ingress.yaml`
 
 ```sh
 kubectl apply -f authorizer_ingress.yaml
@@ -113,7 +117,7 @@ Open your authorizer dashboard, configure admin password and get client ID.
 
 ### Step 8: Deploy API resources
 
-> Note: Change `authorizer_client_id` to based64 encoded value authorizer client_id value obtained in step 7 in api.yaml L:8
+> Note: Change `authorizer_client_id` to based64 encoded value authorizer client_id value obtained in step 7 in api.yaml L:8. Also change domain name in ingress section.
 
 ```sh
 kubectl apply -f api.yaml
@@ -125,6 +129,6 @@ You can deploy frontend to provider of your choice OR on the same stack. For dem
 
 ## URLs
 
-- Live Application URL: https://aws-todo-demo.authorizer.dev/
-- Live Authorizer URL: https://auth.aws-demo.authorizer.dev
-- Live API URL: https://api.aws-demo.authorizer.dev
+- Application URL: https://aws-todo-demo.authorizer.dev/
+- Authorizer URL: https://auth.aws-demo.authorizer.dev
+- API URL: https://api.aws-demo.authorizer.dev
